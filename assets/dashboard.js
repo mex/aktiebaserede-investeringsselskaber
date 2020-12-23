@@ -63,7 +63,7 @@ function updateUrl() {
   if (selected.search) {
     params.push('search=' + selected.search)
   }
-  var url = '/'
+  var url = '/aktiebaserede-investeringsselskaber/'
   if (params.length > 0) {
     url += '?' + params.join('&')
   }
