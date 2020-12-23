@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Aktiebaserede investeringsselskaber</title>
+
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <input id="search" class="form-control form-control-dark w-100" type="text" placeholder="Søg" aria-label="Søg">
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <main>
+          <div id="spinner" class="text-center pt-5">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <div id="headline" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" style="display: none">
+            <h1 class="h2">Aktiebaserede investeringsselskaber</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div id="year" class="btn-group me-2">
+                <button ref="2020" type="button" class="btn btn-sm btn-outline-primary">2020</button>
+                <button ref="2021" type="button" class="btn btn-sm btn-outline-primary">2021</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Land
+              </button>
+              <ul id="reg" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a ref="" class="dropdown-item" href="#">Alle</a></li>
+                <li><a ref="DE" class="dropdown-item" href="#">DE</a></li>
+                <li><a ref="DK" class="dropdown-item" href="#">DK</a></li>
+                <li><a ref="FI" class="dropdown-item" href="#">FI</a></li>
+                <li><a ref="FR" class="dropdown-item" href="#">FR</a></li>
+                <li><a ref="IE" class="dropdown-item" href="#">IE</a></li>
+                <li><a ref="LU" class="dropdown-item" href="#">LU</a></li>
+                <li><a ref="NO" class="dropdown-item" href="#">NO</a></li>
+                <li><a ref="SE" class="dropdown-item" href="#">SE</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="table" class="table-responsive" style="display: none">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th class="has-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Registreringsland / Skattemæssigt hjemsted">Land</th>
+                  <th class="has-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="ISIN-kode">ISIN</th>
+                  <th>Navn</th>
+                  <th class="has-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="LEI-kode">LEI</th>
+                  <th>ASIDENT</th>
+                  <th>CVR/SE/TIN</th>
+                  <th class="has-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Gruppe / Navn">Gruppe</th>
+                  <th class="has-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Første registreringsår">År</th>
+                </tr>
+              </thead>
+              <tbody id="table-content"></tbody>
+            </table>
+
+            <p><em>Kilde: <a href="https://skat.dk/skat.aspx?oid=2244641" target="_blank">https://skat.dk/skat.aspx?oid=2244641</a></em></p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+    <script src="/assets/bootstrap.bundle.min.js"></script>
+    <script src="/assets/dashboard.js"></script>
+  </body>
+</html>
