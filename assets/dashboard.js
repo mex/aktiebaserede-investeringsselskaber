@@ -101,7 +101,7 @@ function fetchList(year) {
   document.getElementById('spinner').style.display = 'block'
   document.getElementById('headline').style.display = 'none'
   document.getElementById('table').style.display = 'none'
-  return fetch('/lists/' + year + '.json')
+  return fetch('/aktiebaserede-investeringsselskaber/lists/' + year + '.json')
     .then(function (val) {
       return val.json()
     })
